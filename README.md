@@ -27,6 +27,16 @@
 | Safety layer | Blocks unsupported promises and risky auto-responses |
 | Evaluation layer | Measures baseline performance, decision quality, and LLM agreement |
 
+## Feature grid
+
+| Capability | Why it matters |
+|---|---|
+| Intent discovery | Turns noisy support texts into a structured taxonomy |
+| Historical retrieval | Reuses brand-approved resolution patterns |
+| Safe automation | Prevents unsupported promises or risky replies |
+| Human fallback | Escalates ambiguous cases with explicit reasoning |
+| Reproducible evaluation | Makes the system testable and auditable |
+
 ## Result snapshot
 
 - Accuracy on the TF-IDF baseline: 89.0%
@@ -75,9 +85,21 @@ flowchart LR
     F -->|Escalate| H[Human Agent + Reason]
 ```
 
+## 4. Demo flow
+
+1. A customer message arrives from social support.
+2. The intent model identifies the likely issue category.
+3. Similar historical conversations are retrieved from the vector index.
+4. A grounded response is generated from evidence, not free-form guesses.
+5. The decision policy approves or escalates based on confidence and safety.
+
+## 5. Recruiter-friendly outcome summary
+
+This project demonstrates product thinking: it combines NLP, retrieval, guarded generation, and policy-based triage into one end-to-end workflow. The result is not just a model demo, but a realistic support automation system that values trust, explainability, and safe escalation.
+
 ---
 
-## 4. Quick start
+## 6. Quick start
 
 ```bash
 pip install -r requirements.txt
