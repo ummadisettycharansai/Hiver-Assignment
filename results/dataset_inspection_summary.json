@@ -1,0 +1,22 @@
+{
+  "total_rows": 50000,
+  "missing_text_rows": 0,
+  "duplicate_tweet_ids": 0,
+  "inbound_customer_tweets": 27413,
+  "outbound_brand_tweets": 22587,
+  "unique_authors_total": 13913,
+  "unique_brands_count": 101,
+  "unique_customers_count": 13812,
+  "top_brands": {
+    "AmazonHelp": 3029,
+    "AppleSupport": 1656,
+    "Uber_Support": 931,
+    "ChipotleTweets": 762,
+    "SpotifyCares": 634,
+    "Tesco": 618,
+    "British_Airways": 581,
+    "Delta": 571,
+    "comcastcares": 526,
+    "sainsburys": 517
+  }
+}

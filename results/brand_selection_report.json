@@ -1,0 +1,56 @@
+{
+  "selected_brand": "AmazonHelp",
+  "selection_rationale": "@AmazonHelp ranked #1 with 2,974 total conversations, 2,974 resolved multi-turn threads (100.0% resolution rate), and average reply length of 130.9 characters. It provides rich, repeatable customer support patterns suitable for intent discovery and historical resolution retrieval.",
+  "top_5_brands": [
+    {
+      "brand": "AmazonHelp",
+      "total_conversations": 2974,
+      "resolved_conversations": 2974,
+      "resolution_rate_pct": 100.0,
+      "avg_turns": 5.08,
+      "avg_customer_msg_len": 130.5,
+      "avg_brand_reply_len": 130.9,
+      "brand_score": 1415.78
+    },
+    {
+      "brand": "AppleSupport",
+      "total_conversations": 2050,
+      "resolved_conversations": 2050,
+      "resolution_rate_pct": 100.0,
+      "avg_turns": 3.27,
+      "avg_customer_msg_len": 124.3,
+      "avg_brand_reply_len": 140.7,
+      "brand_score": 1048.15
+    },
+    {
+      "brand": "Uber_Support",
+      "total_conversations": 1423,
+      "resolved_conversations": 1423,
+      "resolution_rate_pct": 100.0,
+      "avg_turns": 3.32,
+      "avg_customer_msg_len": 132.7,
+      "avg_brand_reply_len": 111.3,
+      "brand_score": 791.46
+    },
+    {
+      "brand": "comcastcares",
+      "total_conversations": 782,
+      "resolved_conversations": 782,
+      "resolution_rate_pct": 100.0,
+      "avg_turns": 2.95,
+      "avg_customer_msg_len": 122.1,
+      "avg_brand_reply_len": 133.1,
+      "brand_score": 539.42
+    },
+    {
+      "brand": "SpotifyCares",
+      "total_conversations": 779,
+      "resolved_conversations": 779,
+      "resolution_rate_pct": 100.0,
+      "avg_turns": 3.64,
+      "avg_customer_msg_len": 117.9,
+      "avg_brand_reply_len": 134.5,
+      "brand_score": 538.51
+    }
+  ]
+}

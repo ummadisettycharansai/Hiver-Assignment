@@ -1,0 +1,4 @@
+model,eval_set,accuracy,macro_f1,weighted_f1,macro_precision,macro_recall
+1. Majority Baseline,Golden Set (200),0.545,0.0784,0.3845,0.0606,0.1111
+2. TF-IDF + LogReg,Golden Set (200),0.89,0.8251,0.8876,0.914,0.777
+3. SentenceEmbedding + LogReg,Golden Set (200),0.705,0.5187,0.729,0.4856,0.5921

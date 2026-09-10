@@ -1,0 +1,8 @@
+Metric,Value
+Total Golden Examples,200
+Auto-Handled Count (%),51 (25.5%)
+Escalated Count (%),149 (74.5%)
+Decision Accuracy,0.76
+Safe Auto-Handle Rate,0.5176
+Unsafe Auto-Handle Rate (False Positive),0.0609
+False Escalation Rate,0.4824

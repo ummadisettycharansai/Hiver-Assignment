@@ -1,0 +1,16 @@
+{
+  "brand": "AmazonHelp",
+  "seed": 42,
+  "total_conversations": 4866,
+  "resolved_conversations": 4866,
+  "full_split": {
+    "train": 3406,
+    "val": 729,
+    "test": 731
+  },
+  "subsample_split": {
+    "train": 3406,
+    "val": 729,
+    "test": 731
+  }
+}

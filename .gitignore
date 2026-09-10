@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+.dist/
+build/
+dist/
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+
+# ── DATA: Raw dataset (too large for git) ───────────────────────────────────
+data/raw/twcs/twcs.csv
+data/raw/*.csv
+data/raw/*.zip
+data/raw/*.parquet
+
+# ── DATA: Processed JSONL / parquet (reproducible from scripts) ─────────────
+data/processed/*.jsonl
+data/processed/*.parquet
+data/processed/retrieval_index/faiss_index.bin
+data/processed/retrieval_index/index_metadata.pkl
+
+# ── DATA: Subsample (reproducible) ──────────────────────────────────────────
+data/subsample/*.jsonl
+
+# ── Model artefacts ──────────────────────────────────────────────────────────
+*.bin
+*.pkl
+*.pt
+*.pth
+*.onnx
+
+# ── Environment & secrets ────────────────────────────────────────────────────
+.env
+
+# ── Cache & local storage ────────────────────────────────────────────────────
+.cache/
+.llm_cache/
+*.log
+
+# ── OS noise ────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db

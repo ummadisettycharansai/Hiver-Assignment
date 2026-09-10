@@ -1,0 +1,386 @@
+{
+  "majority_test": {
+    "model_name": "Majority Baseline (Test)",
+    "accuracy": 0.5267,
+    "macro_precision": 0.0585,
+    "macro_recall": 0.1111,
+    "macro_f1": 0.0767,
+    "weighted_f1": 0.3634,
+    "per_class": {
+      "order_delivery_delay": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 158.0
+      },
+      "refund_return_status": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 26.0
+      },
+      "damaged_defective_item": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 8.0
+      },
+      "account_login_prime": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 80.0
+      },
+      "payment_billing_issue": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "digital_services": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 24.0
+      },
+      "customer_service_complaint": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 19.0
+      },
+      "general_inquiry_availability": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 21.0
+      },
+      "out_of_scope_other": {
+        "precision": 0.5266757865937073,
+        "recall": 1.0,
+        "f1-score": 0.6899641577060932,
+        "support": 385.0
+      }
+    }
+  },
+  "majority_gold": {
+    "model_name": "Majority Baseline (Golden)",
+    "accuracy": 0.545,
+    "macro_precision": 0.0606,
+    "macro_recall": 0.1111,
+    "macro_f1": 0.0784,
+    "weighted_f1": 0.3845,
+    "per_class": {
+      "order_delivery_delay": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 43.0
+      },
+      "refund_return_status": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 5.0
+      },
+      "damaged_defective_item": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 2.0
+      },
+      "account_login_prime": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 20.0
+      },
+      "payment_billing_issue": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 3.0
+      },
+      "digital_services": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 6.0
+      },
+      "customer_service_complaint": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 6.0
+      },
+      "general_inquiry_availability": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 6.0
+      },
+      "out_of_scope_other": {
+        "precision": 0.545,
+        "recall": 1.0,
+        "f1-score": 0.7055016181229773,
+        "support": 109.0
+      }
+    }
+  },
+  "tfidf_test": {
+    "model_name": "TF-IDF Baseline (Test)",
+    "accuracy": 0.8892,
+    "macro_precision": 0.8182,
+    "macro_recall": 0.801,
+    "macro_f1": 0.8074,
+    "weighted_f1": 0.8896,
+    "per_class": {
+      "order_delivery_delay": {
+        "precision": 0.8268156424581006,
+        "recall": 0.9367088607594937,
+        "f1-score": 0.8783382789317508,
+        "support": 158.0
+      },
+      "refund_return_status": {
+        "precision": 0.9166666666666666,
+        "recall": 0.8461538461538461,
+        "f1-score": 0.88,
+        "support": 26.0
+      },
+      "damaged_defective_item": {
+        "precision": 0.875,
+        "recall": 0.875,
+        "f1-score": 0.875,
+        "support": 8.0
+      },
+      "account_login_prime": {
+        "precision": 0.9577464788732394,
+        "recall": 0.85,
+        "f1-score": 0.9006622516556292,
+        "support": 80.0
+      },
+      "payment_billing_issue": {
+        "precision": 0.5555555555555556,
+        "recall": 0.5,
+        "f1-score": 0.5263157894736842,
+        "support": 10.0
+      },
+      "digital_services": {
+        "precision": 0.9090909090909091,
+        "recall": 0.8333333333333334,
+        "f1-score": 0.8695652173913043,
+        "support": 24.0
+      },
+      "customer_service_complaint": {
+        "precision": 0.6521739130434783,
+        "recall": 0.7894736842105263,
+        "f1-score": 0.7142857142857143,
+        "support": 19.0
+      },
+      "general_inquiry_availability": {
+        "precision": 0.7368421052631579,
+        "recall": 0.6666666666666666,
+        "f1-score": 0.7,
+        "support": 21.0
+      },
+      "out_of_scope_other": {
+        "precision": 0.9335106382978723,
+        "recall": 0.9116883116883117,
+        "f1-score": 0.9224704336399474,
+        "support": 385.0
+      }
+    }
+  },
+  "tfidf_gold": {
+    "model_name": "TF-IDF Baseline (Golden)",
+    "accuracy": 0.89,
+    "macro_precision": 0.914,
+    "macro_recall": 0.777,
+    "macro_f1": 0.8251,
+    "weighted_f1": 0.8876,
+    "per_class": {
+      "order_delivery_delay": {
+        "precision": 0.8125,
+        "recall": 0.9069767441860465,
+        "f1-score": 0.8571428571428571,
+        "support": 43.0
+      },
+      "refund_return_status": {
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1-score": 0.8,
+        "support": 5.0
+      },
+      "damaged_defective_item": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1-score": 0.6666666666666666,
+        "support": 2.0
+      },
+      "account_login_prime": {
+        "precision": 0.8947368421052632,
+        "recall": 0.85,
+        "f1-score": 0.8717948717948718,
+        "support": 20.0
+      },
+      "payment_billing_issue": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 3.0
+      },
+      "digital_services": {
+        "precision": 1.0,
+        "recall": 0.8333333333333334,
+        "f1-score": 0.9090909090909091,
+        "support": 6.0
+      },
+      "customer_service_complaint": {
+        "precision": 0.8,
+        "recall": 0.6666666666666666,
+        "f1-score": 0.7272727272727273,
+        "support": 6.0
+      },
+      "general_inquiry_availability": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1-score": 0.6666666666666666,
+        "support": 6.0
+      },
+      "out_of_scope_other": {
+        "precision": 0.918918918918919,
+        "recall": 0.9357798165137615,
+        "f1-score": 0.9272727272727272,
+        "support": 109.0
+      }
+    }
+  },
+  "dense_test": {
+    "model_name": "Dense Embedding Proposed (Test)",
+    "accuracy": 0.7387,
+    "macro_precision": 0.551,
+    "macro_recall": 0.69,
+    "macro_f1": 0.592,
+    "weighted_f1": 0.7634,
+    "per_class": {
+      "order_delivery_delay": {
+        "precision": 0.7337278106508875,
+        "recall": 0.7848101265822784,
+        "f1-score": 0.7584097859327217,
+        "support": 158.0
+      },
+      "refund_return_status": {
+        "precision": 0.6176470588235294,
+        "recall": 0.8076923076923077,
+        "f1-score": 0.7,
+        "support": 26.0
+      },
+      "damaged_defective_item": {
+        "precision": 0.25,
+        "recall": 0.625,
+        "f1-score": 0.35714285714285715,
+        "support": 8.0
+      },
+      "account_login_prime": {
+        "precision": 0.9411764705882353,
+        "recall": 0.8,
+        "f1-score": 0.8648648648648649,
+        "support": 80.0
+      },
+      "payment_billing_issue": {
+        "precision": 0.375,
+        "recall": 0.6,
+        "f1-score": 0.46153846153846156,
+        "support": 10.0
+      },
+      "digital_services": {
+        "precision": 0.6774193548387096,
+        "recall": 0.875,
+        "f1-score": 0.7636363636363637,
+        "support": 24.0
+      },
+      "customer_service_complaint": {
+        "precision": 0.17391304347826086,
+        "recall": 0.42105263157894735,
+        "f1-score": 0.24615384615384617,
+        "support": 19.0
+      },
+      "general_inquiry_availability": {
+        "precision": 0.26666666666666666,
+        "recall": 0.5714285714285714,
+        "f1-score": 0.36363636363636365,
+        "support": 21.0
+      },
+      "out_of_scope_other": {
+        "precision": 0.9238410596026491,
+        "recall": 0.7246753246753247,
+        "f1-score": 0.8122270742358079,
+        "support": 385.0
+      }
+    }
+  },
+  "dense_gold": {
+    "model_name": "Dense Embedding Proposed (Golden)",
+    "accuracy": 0.705,
+    "macro_precision": 0.4856,
+    "macro_recall": 0.5921,
+    "macro_f1": 0.5187,
+    "weighted_f1": 0.729,
+    "per_class": {
+      "order_delivery_delay": {
+        "precision": 0.6739130434782609,
+        "recall": 0.7209302325581395,
+        "f1-score": 0.6966292134831461,
+        "support": 43.0
+      },
+      "refund_return_status": {
+        "precision": 0.4444444444444444,
+        "recall": 0.8,
+        "f1-score": 0.5714285714285714,
+        "support": 5.0
+      },
+      "damaged_defective_item": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 2.0
+      },
+      "account_login_prime": {
+        "precision": 0.8333333333333334,
+        "recall": 0.75,
+        "f1-score": 0.7894736842105263,
+        "support": 20.0
+      },
+      "payment_billing_issue": {
+        "precision": 0.4,
+        "recall": 0.6666666666666666,
+        "f1-score": 0.5,
+        "support": 3.0
+      },
+      "digital_services": {
+        "precision": 0.7142857142857143,
+        "recall": 0.8333333333333334,
+        "f1-score": 0.7692307692307693,
+        "support": 6.0
+      },
+      "customer_service_complaint": {
+        "precision": 0.18181818181818182,
+        "recall": 0.3333333333333333,
+        "f1-score": 0.23529411764705882,
+        "support": 6.0
+      },
+      "general_inquiry_availability": {
+        "precision": 0.21428571428571427,
+        "recall": 0.5,
+        "f1-score": 0.3,
+        "support": 6.0
+      },
+      "out_of_scope_other": {
+        "precision": 0.9080459770114943,
+        "recall": 0.7247706422018348,
+        "f1-score": 0.8061224489795918,
+        "support": 109.0
+      }
+    }
+  }
+}
