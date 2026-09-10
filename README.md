@@ -63,12 +63,13 @@ Customer support teams face massive query volumes on social media. Automating re
 
 ---
 
-## 2. Approach
-We build a 4-stage pipeline:
-1. **Intent Classification**: Classifies customer queries into 9 empirical intent categories.
-2. **Historical Retrieval**: Retrieves top-K historical brand resolutions from a FAISS vector index of `@AmazonHelp` conversations.
-3. **Grounded Generation**: Drafts responses using an LLM Provider grounded strictly in retrieved evidence, with an automated safety validator checking for ungrounded financial promises or credential leaks.
-4. **Defensible Escalation Policy**: Combines classifier confidence, retrieval similarity, evidence count, and safety validation to decide whether to auto-handle or escalate with an explicit human-readable reason.
+## 2. Demo flow
+
+1. A customer message arrives from social support.
+2. The intent model identifies the likely issue category.
+3. Similar historical conversations are retrieved from the vector index.
+4. A grounded response is generated from evidence instead of free-form guessing.
+5. The decision policy approves the reply or escalates with a clear human-readable reason.
 
 ---
 
@@ -85,21 +86,13 @@ flowchart LR
     F -->|Escalate| H[Human Agent + Reason]
 ```
 
-## 4. Demo flow
-
-1. A customer message arrives from social support.
-2. The intent model identifies the likely issue category.
-3. Similar historical conversations are retrieved from the vector index.
-4. A grounded response is generated from evidence, not free-form guesses.
-5. The decision policy approves or escalates based on confidence and safety.
-
-## 5. Recruiter-friendly outcome summary
+## 4. Recruiter-friendly outcome summary
 
 This project demonstrates product thinking: it combines NLP, retrieval, guarded generation, and policy-based triage into one end-to-end workflow. The result is not just a model demo, but a realistic support automation system that values trust, explainability, and safe escalation.
 
 ---
 
-## 6. Quick start
+## 5. Quick start
 
 ```bash
 pip install -r requirements.txt
