@@ -27,6 +27,13 @@
 | Safety layer | Blocks unsupported promises and risky auto-responses |
 | Evaluation layer | Measures baseline performance, decision quality, and LLM agreement |
 
+## Result snapshot
+
+- Accuracy on the TF-IDF baseline: 89.0%
+- Decision accuracy: 76.0%
+- Safe auto-handle rate: 51.76%
+- Runtime: reproducible pipeline completes in ~1 minute on the sample config
+
 ---
 
 ## 1. Problem
@@ -45,36 +52,25 @@ We build a 4-stage pipeline:
 
 ## 3. Architecture
 
+```mermaid
+flowchart LR
+    A[Incoming Customer Query] --> B[Intent Classifier]
+    B --> C[FAISS Retrieval Index]
+    C --> D[Grounded LLM Generator]
+    D --> E[Safety Validation]
+    E --> F{Decision Policy}
+    F -->|Auto-handle| G[Safe Reply]
+    F -->|Escalate| H[Human Agent + Reason]
 ```
-[ Incoming Customer Query ]
-            │
-            ▼
-┌───────────────────────────────┐
-│ Intent Classifier             │ ──► (Predicted Intent & Confidence)
-│ (TF-IDF / Sentence Embedding) │
-└───────────┬───────────────────┘
-            │
-            ▼
-┌───────────────────────────────┐
-│ FAISS Vector Store Index      │ ──► (Top-K Historical Resolutions)
-│ (Dense Cosine Similarity)     │
-└───────────┬───────────────────┘
-            │
-            ▼
-┌───────────────────────────────┐
-│ Grounded LLM Generator        │ ──► (Drafted Reply + Safety Check)
-│ (Evidence-Grounded Prompting) │
-└───────────┬───────────────────┘
-            │
-            ▼
-┌───────────────────────────────┐
-│ Defensible Escalation Policy  │
-└───────────┬───────────────────┘
-            │
-      ┌─────┴────────────────────────┐
-      ▼                              ▼
- [ AUTO_HANDLE ]              [ ESCALATE ]
- (Grounded Reply)         (Human Agent + Reason)
+
+---
+
+## 4. Quick start
+
+```bash
+pip install -r requirements.txt
+python run_pipeline.py --config configs/default.yaml --sample-size 5000
+pytest tests/
 ```
 
 ---
