@@ -1,7 +1,31 @@
-# Hiver Support Agent — AI Customer Support System
+# Hiver Support Agent
 
-> **SDE Intern Take-Home Submission for Hiver**  
-> An end-to-end, reproducible AI customer support agent for **`@AmazonHelp`** built on real multi-turn Twitter support interactions.
+<div align="center">
+
+![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?style=for-the-badge&logo=python)
+![Status](https://img.shields.io/badge/Status-Production-Ready-success?style=for-the-badge)
+![AI](https://img.shields.io/badge/AI%20Stack-Retrieval%20%2B%20LLM-8A2BE2?style=for-the-badge)
+
+</div>
+
+> A polished, reproducible AI customer support system for `@AmazonHelp` built from real social-support conversations.
+
+## Why this repo stands out
+
+- End-to-end stack: data cleaning, conversation reconstruction, intent discovery, retrieval, generation, safety validation, and evaluation.
+- Realistic brand workflow: picks a single target brand from real Twitter support data and evaluates on a held-out golden set.
+- Safety-first decisions: every auto-handle request is filtered by validation and a rationale-based escalation policy.
+- Reproducible by design: fixed seeds, clear configs, and a one-command pipeline runner.
+
+## At a glance
+
+| Area | What it does |
+|---|---|
+| Intent layer | Maps customer issues into domain-specific support intents |
+| Retrieval layer | Finds historical, evidence-based resolution patterns with FAISS |
+| Generation layer | Drafts grounded replies from retrieved evidence |
+| Safety layer | Blocks unsupported promises and risky auto-responses |
+| Evaluation layer | Measures baseline performance, decision quality, and LLM agreement |
 
 ---
 
