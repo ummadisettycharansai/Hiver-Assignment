@@ -66,6 +66,19 @@ This repository is aligned to the assignment requirements as follows:
 4. **Report**: the analysis covers problem framing, results versus at least two baselines, failure analysis, the required "what is misleading about my headline number?" critique, and next steps for the following week.
 5. **Decision log**: the technical trade-offs and non-obvious implementation decisions are captured in `DECISIONS.md`.
 
+### Explicit assignment checklist
+
+- **Repro pipeline**: the project includes a runnable end-to-end pipeline and a clear setup path to reproduce the headline results.
+- **Golden set**: 150-250 hand-labelled examples are represented in `evaluation/golden_set.jsonl` and `evaluation/golden_set.csv`, with a short note on how sampling and labelling were performed.
+- **Evaluation harness**: automated metrics plus an LLM-as-a-judge rubric are used to assess reply quality and grounding.
+- **Report**: the README and report sections cover the business problem, baseline comparisons, failure analysis, the mandatory “what is misleading about my headline number?” critique, and next steps.
+- **Decision log**: non-obvious design decisions and trade-offs are recorded in `DECISIONS.md`.
+- **Data leakage control**: the pipeline uses thread-level splitting and a leakage audit so the test set is not exposed during training or indexing.
+- **Baseline comparison**: both a trivial baseline and a simple baseline are included alongside the proposed system.
+- **Safety-first automation**: replies are filtered with validation logic before auto-handling is allowed.
+- **Human escalation path**: ambiguous or risky cases escalate with human-readable reason strings.
+- **Reproducibility**: fixed seed, deterministic configuration, and repeatable execution paths are included.
+
 ---
 
 ## 1. Problem
