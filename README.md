@@ -56,6 +56,16 @@ This project models a realistic AI customer-support workflow: it does not just c
 - Provides reproducible evaluation artifacts and decision-quality metrics
 - Includes baseline comparisons and a golden evaluation set
 
+## Deliverables coverage
+
+This repository is aligned to the assignment requirements as follows:
+
+1. **Runnable pipeline**: `python run_pipeline.py --config configs/default.yaml` reproduces the headline pipeline in under 15 minutes using the supplied sample config.
+2. **Golden evaluation set**: a 200-example held-out set is built and stored in `evaluation/golden_set.jsonl` and `evaluation/golden_set.csv`, with a short methodology documented in `evaluation/annotation_guidelines.md`.
+3. **Evaluation harness**: the project includes automated metrics, baseline comparisons, and an LLM-as-a-judge rubric for reply quality and grounding, with evidence of judge agreement in `results/tables/judge_agreement.csv`.
+4. **Report**: the analysis covers problem framing, results versus at least two baselines, failure analysis, the required "what is misleading about my headline number?" critique, and next steps for the following week.
+5. **Decision log**: the technical trade-offs and non-obvious implementation decisions are captured in `DECISIONS.md`.
+
 ---
 
 ## 1. Problem
