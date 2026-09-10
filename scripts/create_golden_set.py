@@ -12,6 +12,14 @@ from hiver_agent.utils.logging import get_logger
 
 logger = get_logger("create_golden_set")
 
+def assign_rule_guided_gold_intent(text: str) -> Tuple[str, str, str]:
+    """Compatibility wrapper used by the pipeline and baseline scripts.
+
+    Returns the rule-guided intent, decision, and difficulty label.
+    """
+    return assign_candidate_recommendations(text)
+
+
 def assign_candidate_recommendations(text: str) -> Tuple[str, str, str]:
     """
     Model/rule recommendation helper for candidate test messages.

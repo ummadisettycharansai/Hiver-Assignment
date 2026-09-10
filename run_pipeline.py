@@ -28,8 +28,12 @@ from hiver_agent.utils.logging import get_logger
 from hiver_agent.utils.reproducibility import set_seed
 
 # Import helper from scripts
-from scripts.create_golden_set import assign_rule_guided_gold_intent
-from scripts.generate_report import generate_all_reports
+try:
+    from scripts.create_golden_set import assign_rule_guided_gold_intent
+    from scripts.generate_report import generate_all_reports
+except ModuleNotFoundError:  # pragma: no cover - direct script execution fallback
+    from create_golden_set import assign_rule_guided_gold_intent
+    from generate_report import generate_all_reports
 
 logger = get_logger("run_pipeline")
 

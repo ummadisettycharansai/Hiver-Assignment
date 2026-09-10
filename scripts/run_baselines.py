@@ -14,7 +14,10 @@ sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 from hiver_agent.config import get_config
 from hiver_agent.intents.classifier import MajorityBaselineClassifier, TFIDFBaselineClassifier, DenseEmbeddingClassifier
 from hiver_agent.intents.discovery import get_default_intent_taxonomy
-from create_golden_set import assign_rule_guided_gold_intent
+try:
+    from scripts.create_golden_set import assign_rule_guided_gold_intent
+except ModuleNotFoundError:  # pragma: no cover - direct script execution fallback
+    from create_golden_set import assign_rule_guided_gold_intent
 from hiver_agent.utils.io import load_jsonl, save_json
 from hiver_agent.utils.logging import get_logger
 

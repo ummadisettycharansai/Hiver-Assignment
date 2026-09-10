@@ -12,6 +12,13 @@ from hiver_agent.generation.validation import validate_generated_reply
 from hiver_agent.decision.policy import DecisionPolicy
 from hiver_agent.evaluation.metrics import compute_decision_metrics
 from hiver_agent.utils.cache import SimpleCache
+from scripts.create_golden_set import assign_rule_guided_gold_intent
+
+def test_assign_rule_guided_gold_intent_compatibility():
+    intent, decision, difficulty = assign_rule_guided_gold_intent("My package is delayed again")
+    assert intent == "order_delivery_delay"
+    assert decision == "AUTO_HANDLE"
+    assert difficulty in {"easy", "medium", "hard"}
 
 def test_clean_tweet_text():
     raw = "  Hello   world!  @AmazonHelp   \n  "
