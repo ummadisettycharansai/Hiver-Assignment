@@ -34,6 +34,18 @@
 - Safe auto-handle rate: 51.76%
 - Runtime: reproducible pipeline completes in ~1 minute on the sample config
 
+## Why it matters
+
+This project models a realistic AI customer-support workflow: it does not just classify a message, but also decides when it is safe to respond automatically, when to retrieve prior evidence, and when to defer to a human agent. That makes it close to how modern support systems balance automation, trust, and operational safety.
+
+## Project highlights
+
+- Built around a real-world brand workflow for `@AmazonHelp`
+- Uses retrieval-augmented generation with a safety validator
+- Applies a conservative escalation policy to reduce unsafe automation
+- Provides reproducible evaluation artifacts and decision-quality metrics
+- Includes baseline comparisons and a golden evaluation set
+
 ---
 
 ## 1. Problem
